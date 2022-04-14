@@ -9,4 +9,4 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 # web client
 ## RestTemplate
 
-## WebClient (reactive)
+## WebClient (reactive ではこちら)
