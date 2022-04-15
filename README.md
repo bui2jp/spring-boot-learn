@@ -17,6 +17,8 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 
 
 # Redis, Postgre SQL
+動作確認用にdocker-composeでDBを準備
+
 ```
 $ docker-compose up -d
 $ docker-compose down
