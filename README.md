@@ -24,24 +24,31 @@ $ docker-compose down
 
 ## Redis
 ```
-
 ```
 
 ## Postgres
 ```
-$ docker exec -it 435933d179da sh
-# psql -U postgres
-postgres=# \l
-                                 List of databases
-   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
------------+----------+----------+------------+------------+-----------------------
- postgres  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
- template0 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
-           |          |          |            |            | postgres=CTc/postgres
- template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
-           |          |          |            |            | postgres=CTc/postgres
-(3 rows)
 ```
 
 ## Ubuntu 20.04
 作業用に psql と redis cli を入れたubuntu
+
+redis-cli (接続確認)
+```
+/# redis-cli -h my-redis
+my-redis:6379> set mykey01 testvalue01
+OK
+my-redis:6379> get mykey01
+"testvalue01"
+```
+
+psql (接続確認)
+```
+# psql -h my-postgre -U postgres
+ ( passwordが必要 )
+
+dbの一覧
+postgres=# \l
+
+postgres=# \q
+```
