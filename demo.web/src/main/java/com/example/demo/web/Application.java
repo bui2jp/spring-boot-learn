@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Arrays;
 
 @SpringBootApplication
-@RestController
+//@RestController
 public class Application {
 
 	public static void main(String[] args) {

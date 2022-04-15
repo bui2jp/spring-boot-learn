@@ -1,0 +1,28 @@
+version: '3'
+services:
+  my-redis:
+    image: "redis:latest"
+    restart: always
+    ports:
+      - "6379:6379"
+  my-postgre:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"    
+    environment:
+      POSTGRES_PASSWORD: example
+  my-ubuntu:
+    image: ubuntu:20.04
+    command: >     
+      /bin/sh -c "
+        apt update &&
+        apt install -y net-tools &&
+        apt install -y iputils-ping &&
+        apt install -y postgresql-client &&
+        apt install -y redis-tools &&
+        tail -f /dev/null
+      "
+
+
+
